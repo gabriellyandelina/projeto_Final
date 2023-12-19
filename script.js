@@ -8,8 +8,8 @@
     btn.addEventListener("click", function (event) {
         event.preventDefault();
         
-        const weight = document.getElementById('peso').value;
-        const height = document.getElementById('altura').value;
+        const peso = document.getElementById('peso').value;
+        const altura = document.getElementById('altura').value;
 
         const imc = (peso/(altura * altura)).toFixed(2);
 
