@@ -11,7 +11,7 @@
         const weight = document.getElementById('weight').value;
         const height = document.getElementById('height').value;
 
-        const imc = (weight/(height * height)).toFixed(2);
+        const bmi = (weight/(height * height)).toFixed(2);
 
 
         const value = document.getElementById('value');
@@ -20,21 +20,22 @@
 
         document.getElementById('infos').classList.remove('hidden');
 
-        if (imc<18.5){
+        if (bmi<18.5){
             description ="Cuidado! Você está abaixo do peso"
-        } else if (imc >= 18.5 && imc < 25) {
+        } else if (bmi >= 18.5 && bmi < 25) {
             description = "Você está no peso ideal!";
-        }  else if (imc >= 25 && imc < 30) {
+        }  else if (bmi >= 25 && bmi < 30) {
            
            description = "Cuidado! Você está com sobrepeso!";
-        }  else if (imc >= 30 && imc < 35) {
-            description = "Cuidado! Você está com obesidade grau um!";
+        }  else if (bmi >= 30 && bmi < 35) {
+            description = "Cuidado! Você está com obesidade moderada!";
         } else {
-            description = "Cuidado! Você está com obesidade grau dois!";
+            description = "Cuidado! Você está com obesidade morbida!";
         }
 
-        value.textContent = imc.replace('.',',');
+        value.textContent = bmi.replace('.',',');
         document.getElementById("description").textContent = description;
         
     });
+   
    
