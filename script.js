@@ -28,9 +28,9 @@
            
            description = "Cuidado! Você está com sobrepeso!";
         }  else if (imc >= 30 && bmi < 35) {
-            description = "Cuidado! Você está com obesidade moderada!";
+            description = "Cuidado! Você está com obesidade grau um!";
         } else {
-            description = "Cuidado! Você está com obesidade morbida!";
+            description = "Cuidado! Você está com obesidade grau dois!";
         }
 
         value.textContent = imc.replace('.',',');
