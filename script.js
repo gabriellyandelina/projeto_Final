@@ -8,10 +8,10 @@
     btn.addEventListener("click", function (event) {
         event.preventDefault();
         
-        const peso = document.getElementById('peso').value;
-        const altura = document.getElementById('altura').value;
+        const weight = document.getElementById('weight').value;
+        const height = document.getElementById('height').value;
 
-        const imc = (peso/(altura * altura)).toFixed(2);
+        const imc = (weight/(height * height)).toFixed(2);
 
 
         const value = document.getElementById('value');
@@ -22,12 +22,12 @@
 
         if (imc<18.5){
             description ="Cuidado! Você está abaixo do peso"
-        } else if (imc >= 18.5 && bmi < 25) {
+        } else if (imc >= 18.5 && imc < 25) {
             description = "Você está no peso ideal!";
-        }  else if (imc >= 25 && bmi < 30) {
+        }  else if (imc >= 25 && imc < 30) {
            
            description = "Cuidado! Você está com sobrepeso!";
-        }  else if (imc >= 30 && bmi < 35) {
+        }  else if (imc >= 30 && imc < 35) {
             description = "Cuidado! Você está com obesidade grau um!";
         } else {
             description = "Cuidado! Você está com obesidade grau dois!";
